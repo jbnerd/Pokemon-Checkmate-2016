@@ -1,0 +1,173 @@
+body,html{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+
+}
+
+@font-face{
+	font-family: 'Sonsie One';
+	src: url(../fonts/SonsieOne-Regular.ttf);
+}
+
+#part1, #part2{
+	display: flex;
+	flex-grow:1;
+	height: 100%;
+	margin: 0;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+#part1{
+	background:url('img/blue-back.jpg');
+	position: relative;
+
+}
+
+#part1 h2{
+	font-size: 35px !important;
+}
+#logo-section{
+	display: flex;
+	justify-content:space-around;
+	align-items:center;
+}
+
+/**form**/
+.panel-login {
+
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	background-color: #66ccff;
+}
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+	font-family: 'Sonsie One';
+}
+.panel-login>.panel-heading a.active{
+	color: #000099;
+
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+
+
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+	height: 30px;
+	border: 1px solid #ddd;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	font-size: 14px;
+	color: white;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+	background: transparent;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.btn-login, .btn-register{
+	width:100%;
+	background-color: #53A3CD;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	margin-top:30px;
+	font-family: 'Sonsie One';
+	transition: all ease 0.3s;
+
+}
+.btn-login:hover,
+.btn-login:focus,
+.btn-register:hover,
+.btn-register:focus {
+	color: #111;
+	background-color: white;
+
+
+}
+
+/**form ends**/
+
+
+
+#form_error{
+	color: white;
+	background: red ;
+	 width: 50%;
+	  text-align: center
+}
+
+.col-sm-6 #form_error{
+	width: 100%;
+}
+
+
+
+.rulebook{
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+border: solid;
+border-color: white;
+border-radius: 5px;
+color: white;
+background-color: transparent;
+font-size: 20px;
+margin-top: 40px;
+margin-bottom: 30px;
+font-weight: bold;
+transition: all ease 0.3s;
+font-family: 'Sonsie One';
+
+}
+
+a.rulebook{
+	text-decoration: none !important;
+}
+
+.rulebook:focus{
+	color: white;
+}
+.rulebook:hover{
+	color: #23527c;
+	background-color: white;
+}

@@ -1,0 +1,5 @@
+->disable pokecenter.
+->LeaderBoard check.
+->Rulebook not added.
+->Small scoreboard on the top right hand side.
+->Battle animations not added yet.

@@ -1,0 +1,82 @@
+{%load static from staticfiles%}
+<!DOCTYPE html>
+<html lang="en" style="height:100%; width:100%;">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>SELECT POKEMON</title>
+
+
+      <link rel="stylesheet" href="{% static 'pokemon/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'pokemon/css/fontawesome.min.css' %}">
+
+      <link rel="stylesheet" type="text/css" href="{% static 'pokemon/css/select-pokemon.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'pokemon/css/animate.css' %}">
+
+
+
+      <!-- <link href='http://fonts.googleapis.com/css?family=Sonsie+One&effect=3d|fire|fire-animation'rel='stylesheet' type='text/css'> -->
+
+
+
+
+   </head>
+
+   <body style="background:url('{% static "pokemon/img/background4.jpg" %}');">
+        <div id="part1">
+          <div class="row">
+                <div class="col-sm-6 select-pokemon" ><img src="{% static 'pokemon/img/pokemon1.png' %}" class="select-pokemon-img center-block"><h1 class="text-center font-effect-3d">Pichu</h1></div>
+                <div class="col-sm-6 select-pokemon" ><img src="{% static 'pokemon/img/pokemon2.png' %}" class="select-pokemon-img center-block"><h1 class="text-center font-effect-3d">Charmender</h1></div>
+                <div class="col-sm-6 select-pokemon" ><img src="{% static 'pokemon/img/pokemon3.png' %}" class="select-pokemon-img center-block"><h1 class="text-center font-effect-3d">Squirtle</h1></div>
+                <div class="col-sm-6 select-pokemon" ><img src="{% static 'pokemon/img/pokemon4.png' %}" class="select-pokemon-img center-block"><h1 class="text-center font-effect-3d">Bulbasaur</h1></div>
+          </div>
+        </div>
+        <div id="part2">
+              <h1 class="font-effect-fire-animation text-animate" style="font-size:50px; font-family:Sonsie One;">SELECT</h1>
+              <h1 class="font-effect-fire-animation text-animate" style="font-size:50px; font-family:Sonsie One;">A</h1>
+              <h1 class="font-effect-fire-animation text-animate" style="font-size:50px; font-family:Sonsie One;">POKEMON</h1>
+              <a href="/pokemon/" id="lets-go">LETS PLAY</a>
+        </div>
+
+
+
+       <script type="text/javascript" src="{% static 'pokemon/js/jquery-3.1.0.min.js' %}"></script>
+       <script type="text/javascript" src="{% static 'pokemon/js/jquery-ui.min.js' %}"></script>
+       <script type="text/javascript" src="{% static 'pokemon/js/custom.js' %}"></script>
+       <script type="text/javascript" src="{% static 'pokemon/js/bootstrap.min.js' %}"></script>
+       <script type="text/javascript" src="{% static 'pokemon/js/jquery.textillate.js' %}"></script>
+       <script type="text/javascript" src="{% static 'pokemon/js/jquery.lettering.js' %}"></script>
+
+       <script type="text/javascript">
+        $(document).ready(function(){
+
+    $(function() {
+      $('.effective-text').lettering();
+    $('.effective-text').textillate({
+      in: {
+    // set the effect name
+    effect: 'fadeInLeftBig',
+    delay: 200,
+    loop:true
+  }
+
+    });
+    $('.text-animate').textillate({
+      in: {
+    // set the effect name
+    effect: 'rollIn',
+    delay: 200,
+    loop:true
+  }
+});
+
+});
+
+});
+      </script>
+
+   </body>
+
+   </html>

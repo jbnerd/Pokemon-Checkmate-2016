@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Leader Board</title>
+
+
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/leaderboard.css">
+
+
+<link href='http://fonts.googleapis.com/css?family=Sonsie+One&effect=3d|fire|fire-animation'rel='stylesheet' type='text/css'>
+
+   </head>
+
+   <body style="overflow-x:hidden;background:white">
+
+     <div class="container">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-9">
+          <div class="page-header">
+              <h1>Leader Board</h1>
+          </div>
+        </div>
+        <div class="col-sm-3 refresh" >
+          <div class="col-sm-9 message">
+          <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           Try Again
+          </div>
+        </div>
+        <div class="col-sm-3" style="position: relative; top: 10px;float:right">
+          <img src="img/refresh.svg" />
+        </div>
+        </div>
+        </div>
+        <div class="row dataWrap">
+          <div class="row header">
+            <div class="col-sm-1">
+              <h4><strong>Rank<strong></h4>
+            </div>
+            <div class="col-sm-3">
+              <h4><strong>Team Name<strong></h4>
+            </div>
+            <div class="col-sm-3">
+              <h4><strong>Player 1<strong></h4>
+            </div>
+            <div class="col-sm-3">
+              <h4><strong>Player 2<strong></h4>
+            </div>
+            <div class="col-sm-2">
+              <h4><strong>Points<strong></h4>
+            </div>
+          </div>
+          <div class="row data">
+            <div class="col-sm-1" id='rank'>
+              <h4>1</h4>
+            </div>
+            <div class="col-sm-3" id="teamName">
+              <h4>abra ka dabra</h4>
+            </div>
+            <div class="col-sm-3" id="player1">
+              <h4>adam</h4>
+            </div>
+            <div class="col-sm-3" id="player2">
+              <h4>eve</h4>
+            </div>
+            <div class="col-sm-2" id="points">
+              <h4>436</h4>
+            </div>
+          </div>
+          <div class="row data">
+            <div class="col-sm-1" id='rank'>
+              <h4>1</h4>
+            </div>
+            <div class="col-sm-3" id="teamName">
+              <h4>abra ka dabra</h4>
+            </div>
+            <div class="col-sm-3" id="player1">
+              <h4>adam</h4>
+            </div>
+            <div class="col-sm-3" id="player2">
+              <h4>eve</h4>
+            </div>
+            <div class="col-sm-2" id="points">
+              <h4>436</h4>
+            </div>
+          </div>
+          <div class="row data">
+            <div class="col-sm-1" id='rank'>
+              <h4>1</h4>
+            </div>
+            <div class="col-sm-3" id="teamName">
+              <h4>abra ka dabra</h4>
+            </div>
+            <div class="col-sm-3" id="player1">
+              <h4>adam</h4>
+            </div>
+            <div class="col-sm-3" id="player2">
+              <h4>eve</h4>
+            </div>
+            <div class="col-sm-2" id="points">
+              <h4>436</h4>
+            </div>
+          </div>
+          <div class="row data">
+            <div class="col-sm-1" id='rank'>
+              <h4>1</h4>
+            </div>
+            <div class="col-sm-3" id="teamName">
+              <h4>abra ka dabra</h4>
+            </div>
+            <div class="col-sm-3" id="player1">
+              <h4>adam</h4>
+            </div>
+            <div class="col-sm-3" id="player2">
+              <h4>eve</h4>
+            </div>
+            <div class="col-sm-2" id="points">
+              <h4>436</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+     </div>
+     <script type="text/javascript" src='js/jquery-3.1.0.min.js'></script>
+     <script type="text/javascript">
+
+     $('.close').click(function(){
+        $('.message').fadeOut(200);
+     });
+
+     function getData(){
+       $.ajax({
+         type:'GET',
+         url:'',
+         success:function(response){
+           $('.dataWrap').html();
+           var userRow="<div class='row data'> <div class='col-sm-1' id='rank'> <h4>"+team.no+"</h4> </div> <div class='col-sm-3' id='teamName'> <h4>"+team.teamName+"</h4> </div> <div class='col-sm-3' id='player1'> <h4>"+team.player1+"</h4> </div> <div class='col-sm-3' id='player2'> <h4>"+team.player2+"</h4> </div> <div class='col-sm-2' id='score'> <h4>"+team.score+"</h4> </div> </div>"
+            $('.dataWrap').append(userRow);
+         }
+       });
+     }
+     </script>
+   </body>
+   </html>

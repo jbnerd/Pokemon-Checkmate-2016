@@ -1,0 +1,36 @@
+/enlarge sideboard
+/font size
+2 rule
+/vertical centering of all modal boxes
+
+/overflow hidden
+after regsiteration -> go to rulebook
+/big questions
+/leav unattemtpd
+/pokemon position
+/white space no wrap
+/spend -> then increase visited and money calculated
+Ivysaur no img
+
+/y nan??
+/pokecenter disabled
+
+/dont call selectPokemon() after attack
+
+/sidebar pichu maa chuda
+
+/wrong answer pokemon evolve
+
+/hard coded  pokecenter
+
+
+?disabled hover->already won this battle
+
+correct answer ---- attractive color to pokestop and pokegym
+
+
+store IP
+
+lettering js
+
+teamname font

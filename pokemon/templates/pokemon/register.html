@@ -1,0 +1,453 @@
+{%load static from staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>REGISTER</title>
+
+
+      <link rel="stylesheet" href="{% static 'pokemon/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'pokemon/css/fontawesome.min.css' %}">
+
+      <link rel="stylesheet" type="text/css" href="{% static 'pokemon/css/register.css' %}" >
+
+
+       <!-- <link href='http://fonts.googleapis.com/css?family=Sonsie+One&effect=3d|fire|fire-animation'rel='stylesheet' type='text/css'> -->
+
+
+
+
+
+
+
+
+   </head>
+
+   <body>
+     <div id="part1" style="background:url('{% static "pokemon/img/blue-back.jpg" %}');background-size:cover; border-right:100%;">
+
+        <div style="margin-bottom: 70px;" id="logo-section" class="animated fadeInLeft logo">
+            <img id="logo" src="{% static 'pokemon/img/logo.ico' %}" style="height:100px; width:100px;" />
+            <h1 style="color:white; margin-left:20px; font-size:30px; font-weight:bold;">Association For<br>Computing Machinery</h1>
+        </div>
+
+        <div style="margin-bottom: 60px;">
+          <h2 style="color:white; font-size:25px; font-family:cursive;"class="animated fadeInRight presents">presents</h2>
+        </div>
+
+        <div style="margin-bottom: 60px;">
+          <h2 style="color:white; font-size:50px; font-weight:bold;font-family:'Sonsie One';" class="font-effect-3d animated zoomIn game-name">CHECKMATE 2016</h2>
+        </div>
+
+        <div class="row">
+           <div class="col-sm-12">
+              <a href="{% url 'pokemon:show_rulebook' %}" class="center-block text-center rulebook" target="_blank">Rule Book</a>
+           </div>
+        </div>
+     </div>
+
+
+     <div id="part2" style="background:url('{% static 'pokemon/img/background4.jpg' %}')" class="animated slideInRight">
+
+      <div>
+
+      <div class="container animated fadeIn delay-animation" style="width:450px !important; margin-top:20px;">
+      <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-login" style="background:url('{% static 'pokemon/img/blue-back.jpg' %}');background-size:cover; border-right:100%;">
+          <div class="panel-heading">
+            <div class="row" style="margin-top:10px;padding-bottom:0px;">
+
+              <div class="col-xs-6">
+                <a href="{% url 'pokemon:register' %}" class="active" id="register-form-link">Register</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="{% url 'pokemon:login' %}"  id="login-form-link">Login</a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+              <div class="alert fade in" id="response_error">
+                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                 <strong></strong>
+              </div>
+              <form id="register-form" role="form" style="display: block;" >
+                {% csrf_token %}
+
+                {% if error_message %}
+                  {{ error_message }}
+                {% endif %}<br>
+                <div class="form-group">
+                    <h3 class="text-center" style="color:white; margin-bottom:20px; ">New Team</h3>
+                  </div>
+                  <div class="form-group">
+
+                    <input data-check="teamname" type="text" name="teamname" id="team-name" tabindex="1" class="form-control" placeholder="Teamname" value="" required>
+
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                    <div class="col-sm-6">
+                    <h4 style="color:white; padding-left:10px;">Player 1</h3>
+                    </div>
+                    <div class="col-sm-6">
+                    <h4 style="color:white; padding-left:10px;">Player 2</h3>
+                    </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="row">
+                    <div class="col-sm-6">
+                    <input data-check="name" type="text" name="name1" id="username1" tabindex="2" class="form-control" placeholder="Name" value="" required>
+                    </div>
+                    <div class="col-sm-6">
+                    <input data-check="name" type="text" name="name2" id="username2" tabindex="3" class="form-control" placeholder="Name" value="" required>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                    <div class="col-sm-6">
+                     <input data-check="email" type="email" name="email1" id="email1" tabindex="4" class="form-control" placeholder="Email Address" value="" required>
+                    </div>
+                    <div class="col-sm-6">
+                     <input data-check="email" type="email" name="email2" id="email2" tabindex="5" class="form-control" placeholder="Email Address" value="" required>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                    <div class="col-sm-6">
+                    <input data-check="phone" type="text" name="phone1" id="phone1" tabindex="6" class="form-control" placeholder="Phone No." value="" required>
+                    </div>
+                    <div class="col-sm-6">
+                    <input data-check="phone" type="text" name="phone2" id="phone2" tabindex="7" class="form-control" placeholder="Phone No." value="" required>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                    <div class="col-sm-6">
+                    <input data-check="idNo" type="text" name="idno1" id="idno1" tabindex="6" class="form-control" placeholder="ID (Eg.2014A7PS077P)" value="" required>
+                    </div>
+                    <div class="col-sm-6">
+                    <input data-check="idNo" type="text" name="idno2" id="idno2" tabindex="7" class="form-control" placeholder="ID (Eg.2014A7PS077P)" value="" required>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="8" class="form-control" placeholder="Password" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="confirm-password" id="confirm-password" tabindex="9" class="form-control" placeholder="Confirm Password" required>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="10" class="form-control btn btn-register" value="Register Now">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form id="login-form"  role="form" style="display: none;">
+                  {% csrf_token %}
+
+                  {% if error_message %}
+                    {{ error_message }}
+                  {% endif %}<br>
+                  <div class="form-group">
+                    <h3 class="text-center" style="color:white; margin-bottom:20px; ">Existing Team</h3>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="teamname" id="teamname" tabindex="1" class="form-control" placeholder="Teamname" value="" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+     </div>
+
+
+
+
+
+
+
+
+
+     <script type="text/javascript" src="{% static 'pokemon/js/jquery-3.1.0.min.js' %}"></script>
+     <script type="text/javascript">
+     $('input').after("<div id='form_error'></div>");
+     $('#response_error').hide();
+
+        $(document).ready(function(){
+
+
+
+          $(function() {
+
+    $('#login-form-link').click(function(e) {
+      $('#response_error').hide();
+    $("#login-form").delay(100).fadeIn(100);
+    $("#register-form").fadeOut(100);
+    $('#register-form-link').removeClass('active');
+    $(this).addClass('active');
+    e.preventDefault();
+  });
+  $('#register-form-link').click(function(e) {
+    $('#response_error').hide();
+    $("#register-form").delay(100).fadeIn(100);
+    $("#login-form").fadeOut(100);
+    $('#login-form-link').removeClass('active');
+    $(this).addClass('active');
+    e.preventDefault();
+  });
+
+});
+
+var url=window.location.href;
+if(url.indexOf('login')!=-1){
+    $('#login-form-link').click();
+}
+
+var regExForm={
+  teamname:[
+    {
+      check:/^\S+$/,
+      message:'White Space Not allowed'
+    },
+  ] ,
+  phone:[
+    {
+      check:/[789]\d{9}/,
+      message:'Invalid Phone Number'
+    }
+  ],
+  email:[
+    {
+      check:/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/,
+      message:'Invalid Email'
+    }
+  ],
+  name:[
+    {
+      check:/^[A-z\s]*$/,
+      message:'Name must contain only characters'
+    },
+    {
+      check:/^.{3,}$/,
+      message:'Name must be atleast 3 characters'
+    }
+  ],
+  idNo:[
+    {
+      check:/201[1-6][AB][1-578B][APT][1-578S]\d\d\dP/,
+      message:'Invalid BITS ID'
+    }
+  ]
+};
+
+var flag;
+$('input').change(function(){
+  var $this = $(this);
+    var type=$this.attr('data-check');
+    var checks = regExForm[type];
+    var data=$this.val();
+    checks.map(function(ele){
+        console.log(ele.check);
+        if(!ele.check.test(data)){
+          flag=ele.check;
+          $this.next('#form_error').html(ele.message);
+        }
+        else{
+          if(flag==ele.check){
+            $this.next('#form_error').html('');
+          }
+        }
+    });
+});
+
+function check_data(){
+
+        var teamReg = /[\s]/;
+        var team = $('#team-name').val();
+        var teamTest = teamReg.test(team);
+
+        var phoVal1 = $('#phone1').val();
+        var phoVal2 = $('#phone2').val();
+        var phoReg = /^([0-9]{10})$/;
+        var phoTest = phoReg.test(phoVal1) && phoReg.test(phoVal2);
+
+        var emaVal1 = $('#email1').val();
+        var emaVal2 = $('#email2').val();
+        var emaReg = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+        var emaTest = emaReg.test(emaVal1) && emaReg.test(emaVal2);
+
+        var name1 = $('#username1').val();
+        var name2 = $('#username2').val();
+        var nameReg = /^[A-z\s]{3,}$/;
+        var nameTest = nameReg.test(name1) && nameReg.test(name2);
+
+        var idno1 = $('#idno1').val();
+        var idno2 =  $('#idno2').val();
+        var idReg=/201[1-6][AB][1-578B][APT][1-578S]\d\d\dP/;
+        var idTest = idReg.test(idno1) && idReg.test(idno2);
+
+        if(teamTest){
+          alert('White Space not allowed');
+          return false;
+        }
+
+        if(team.length>20){
+          alert('Team Name must be shorter than 20 characters');
+          return false;
+        }
+        if(!phoTest){
+          alert("Invalid Phone Number");
+          return false;
+        }
+        if(!emaTest){
+          alert("Invalid Email Id");
+          return false;
+        }
+        if(!idTest){
+          alert('Invalid BITS Id');
+          return false;
+        }
+
+
+        if(!nameTest){
+          alert("Invalid Name");
+          return false;
+        }
+        console.log('all fine');
+        return true;
+}
+
+
+  function getCookie(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie != '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = jQuery.trim(cookies[i]);
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+  }
+  var csrftoken = getCookie('csrftoken');
+
+
+$('#register-form').submit(function(e){
+    e.preventDefault();
+  if(check_data()){
+    formData=$(this).serializeArray();
+    var data={};
+    formData.map(function(ele){
+      data[ele.name]=ele.value;
+    });
+    data['csrfmiddlewaretoken']= csrftoken;
+    $.ajax({
+      type:'POST',
+      url:" {% url 'pokemon:register' %} ",
+      data:data,
+      success:function(response){
+        if(response.status==0){
+          $('#response_error').show();
+          $('#response_error').removeClass('alert-success');
+          $('#response_error').addClass('alert-danger');
+          $('#response_error strong').html(response.message);
+
+        }
+        else if(response.status==1){
+          $("input:not([type='submit'])").val('');
+          $('#response_error').show();
+          $('#response_error').removeClass('alert-danger');
+          $('#response_error').addClass('alert-success');
+          message=response.message+"<br>Team Name: "+response.teamname;
+          $('#response_error strong').html(message);
+          setTimeout(function(){
+            $('#login-form-link').click();
+          },4000);
+        }
+      }
+    });
+  }
+});
+
+$('#login-form').submit(function(e){
+  e.preventDefault();
+  formData=$(this).serializeArray();
+  var data={};
+  formData.map(function(ele){
+    data[ele.name]=ele.value;
+  });
+  data['csrfmiddlewaretoken']= csrftoken;
+  console.log(data);
+  $.ajax({
+    type:'POST',
+    url:"{% url 'pokemon:login' %} ",
+    data:data,
+    success:function(response){
+
+      if(response.status=='0'){
+        $('#response_error').show();
+        $('#response_error').removeClass('alert-success');
+        $('#response_error').addClass('alert-danger');
+        $('#response_error strong').html(response.error_message);
+      }
+      else if(response.status=='1'){
+          location.reload();
+      }
+    }
+  });
+});
+
+$('.close').click(function (e) {
+  e.preventDefault();
+  $('.alert').hide();
+
+})
+        });
+
+
+
+      </script>
+
+
+   </body>
+
+   </html>

@@ -1,0 +1,80 @@
+<<<<<<< HEAD
+$('#register-form-link').click(function(e) {
+    $("#register-form").delay(100).fadeIn(100);
+    $("#login-form").fadeOut(100);
+    $('#login-form-link').removeClass('active');
+    $(this).addClass('active');
+    e.preventDefault();
+  });
+   $("#register-submit").click(function() {
+var team-name = $("#team-name").val();
+var name1 = $("#name1").val();
+var name2 = $("#name2").val();
+var email1 = $("#email1").val();
+var email2 = $("#email2").val();
+var password = $("#password").val();
+var phone1 = $("#phone1").val();
+var phone2 = $("#phone2").val();
+var confirm-password = $("#confirm-password").val();
+if (team-name==""||name1==""||name2==""||email1==""||email2==""||phone1==""||phone2==""||password==""||confirm-password=="") {
+alert("Please fill all fields...!!!!!!");
+} else if ((password.length) < 8) {
+alert("Password should atleast 8 character in length...!!!!!!");
+} else if (!(password).match(confirm-password)) {
+alert("Your passwords don't match. Try again?");
+} else {
+$.post("register.php", {
+name1: name,
+email1: email,
+password1: password
+}, function(data) {
+if (data == 'You have Successfully Registered') {
+$("form")[0].reset();
+}
+alert(data);
+});
+}
+});
+
+});
+=======
+$('#register-form-link').click(function(e) {
+    $("#register-form").delay(100).fadeIn(100);
+    $("#login-form").fadeOut(100);
+    $('#login-form-link').removeClass('active');
+    $(this).addClass('active');
+    e.preventDefault();
+  });
+   $("#register-submit").click(function() {
+var team-name = $("#team-name").val();
+var name1 = $("#name1").val();
+var name2 = $("#name2").val();
+var email1 = $("#email1").val();
+var email2 = $("#email2").val();
+var password = $("#password").val();
+var phone1 = $("#phone1").val();
+var phone2 = $("#phone2").val();
+var confirm-password = $("#confirm-password").val();
+if (team-name==""||name1==""||name2==""||email1==""||email2==""||phone1==""||phone2==""||password==""||confirm-password=="") {
+alert("Please fill all fields...!!!!!!");
+} else if ((password.length) < 8) {
+alert("Password should atleast 8 character in length...!!!!!!");
+} else if (!(password).match(confirm-password)) {
+alert("Your passwords don't match. Try again?");
+} else {
+$.post("register.php", {
+name1: name,
+email1: email,
+password1: password
+}, function(data) {
+if (data == 'You have Successfully Registered') {
+$("form")[0].reset();
+}
+alert(data);
+});
+}
+});
+
+});
+>>>>>>> 5f579a7b1f2f88503966e3cd354dbe1bf2eb8dbf
+         

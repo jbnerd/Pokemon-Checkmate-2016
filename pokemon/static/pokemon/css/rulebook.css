@@ -1,0 +1,160 @@
+body,html{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+      height: 100%;
+	justify-content:space-around;
+	background: #000;
+	/*background:url('../img/rulebook.jpg');*/
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+
+
+
+}
+
+@font-face{
+	font-family: 'Sonsie One';
+	src: url(../fonts/SonsieOne-Regular.ttf);
+}
+
+#part1, #part2{
+	margin: 0;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+#part2{
+	height: 320px;
+	width:400px;
+	margin-top:100px;
+}
+
+.head{
+      color: blue;
+      font-weight: bold;
+      font-size: 60px;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      font-family:'Sonsie One';
+      }
+      ul{
+            margin-top:40px;
+            margin-bottom:10px;
+            padding-left: 30px;
+            padding-right: 8px;
+
+      }
+	li{
+      color: black;
+      margin-bottom: 8px;
+      font-size: 15px;
+      font-weight: bolder;
+      font-family: 'Times New';
+      }
+
+      a{
+      width: 150px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom:10px;
+      border:solid;
+      border-color: white;
+      border-radius: 5px;
+      color: white;
+      background-color: transparent;
+      font-size: 20px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      transition: all ease 0.3s;
+      font-family:'Sonsie One';
+      }
+      a:hover{
+      color: #111;
+      background-color: white;
+      text-decoration: none;
+      }
+
+
+
+.ui-flipbook .page {
+
+  border-radius:20px;
+  background: url('../img/background6.jpeg');
+  background-size:cover;
+  background-position:center;
+ }
+
+.cover, .last{
+	border: 10px solid white !important;
+}
+
+.ui-flipbook .page-wrapper {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px;
+}
+
+
+.catalog-app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  }
+
+#viewer {
+  width: 100%;
+  height: calc(100%);
+  overflow: hidden;
+}
+
+.ui-arrow-next-page,
+.ui-arrow-previous-page {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: calc(37% - 30px);
+  right: -80px;
+  z-index: 10;
+  background-image: url('../img/arrow-front.png');
+  background-size: cover;
+  background-position: 0 0;
+  cursor: pointer;
+  border:none;
+}
+.ui-arrow-next-page:hover,
+.ui-arrow-previous-page:hover{
+      background-color: transparent;
+
+}
+.ui-arrow-next-page:hover{
+	transform: translate(5px) scale(1.3);
+}
+.ui-arrow-previous-page:hover{
+	transform: rotateY(180deg) translate(5px) scale(1.3);
+}
+
+.ui-arrow-previous-page {
+  background-position: 0 0;
+  right: auto;
+  left: -80px;
+  transform-origin-center;
+  transform:rotateY(180deg);
+}
+
+.first-page .ui-arrow-previous-page {
+  opacity: 0;
+}
+.last-page .ui-arrow-next-page {
+  opacity: 0;
+}
+
+
+.ui-menu{
+	display: none;
+}

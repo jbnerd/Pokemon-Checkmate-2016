@@ -1,0 +1,44 @@
+#this is for pokemon
+#run from django shell
+from pokemon.views import *
+with open('your_file.json') as fh:
+     data = json.load(fh)
+pokeData = []
+s = data[0]['model']
+for i in data:
+     if i['model'] == s:
+             pokeData.append(i)
+for j in pokeData:
+     i = j['fields']
+     p = Pokemon()
+     p.poke_name = i['poke_name']
+     p.poke_type = i['poke_type']
+     p.question_number = i['question_number']
+     p.save()
+     print(j['pk'])
+     
+     
+     
+#this is for Questions
+#run from django shell
+from pokemon.views import *
+with open('queans.json') as fh:
+     data = json.load(fh)
+qData = []
+s = data[50]['model']
+for i in data:
+     if i['model'] == s:
+             qData.append(i)
+for j in qData:
+     i = j['fields']
+     p = Question()
+     p.number = i['number']
+     p.content = i['content']
+     p.difficulty_level = i['difficulty_level']
+     p.answer = i['answer']
+     p.save()
+     print(j['pk'])
+     
+     
+     
+

@@ -1,0 +1,130 @@
+{%load static from staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>RULEBOOK</title>
+
+
+      <link rel="stylesheet" href="{% static 'pokemon/css/bootstrap.min.css' %}">
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{% static 'pokemon/css/rulebook.css' %}">
+
+
+<link href='http://fonts.googleapis.com/css?family=Sonsie+One&effect=3d|fire|fire-animation'rel='stylesheet' type='text/css'>
+
+
+
+
+   </head>
+
+   <body style="overflow-x:hidden;">
+
+   <div id="part1">
+    <div class="container" style="width:500px !important;">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="text-center head font-effect-3d">RULEBOOK</h1>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-12">
+
+               <div class="catalog-app">
+              <div id="viewer">
+                <div id="flipbook" class="ui-flipbook">
+
+                <div class="page cover" style="display:flex; justify-content:center; align-items:center; flex-direction:column;"><i class="fa fa-book w3-xxlarge" style="font-size:70px;color:black;"></i>
+                <h1 class="font-style-3d" style="font-family:'Sonsie One';color:black; text-align:center;">Read carefully</h1>
+                </div>
+
+                <div class="page" style="border-right:2px solid grey;">
+                <ul>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+
+
+                </ul>
+                <p style="text-align:center; font-size:15px; color:black; margin-top:35px; font-weight:bold;">1</p>
+                </div>
+                <div class="page">
+                   <ul>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+
+
+                </ul>
+                <p style="text-align:center; font-size:15px; color:black; margin-top:35px; font-weight:bold;">2</p>
+                </div>
+                <div class="page" style="border-right:2px solid grey;">
+                   <ul>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+
+
+                </ul>
+                <p style="text-align:center; font-size:15px; color:black; margin-top:35px; font-weight:bold;">3</p>
+                </div>
+
+                <div class="page">
+                   <ul>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+                 <li>If you select more than one option for a particular question,only first option will be considered for evaluation.</li>
+
+
+                </ul>
+                <p style="text-align:center; font-size:15px; color:black; margin-top:35px; font-weight:bold;">4</p>
+                </div>
+
+
+                <div class="page last" style="background:url('img/background6.jpeg'); background-size:cover; background-position:center;"></div>
+                  <a ignore="1" class="ui-arrow-control ui-arrow-next-page"></a>
+                  <a ignore="1" class="ui-arrow-control ui-arrow-previous-page"></a>
+                </div>
+              </div>
+              </div>
+
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-sm-12">
+               <a href="../" class="center-block text-center">CLOSE</a>
+            </div>
+         </div>
+      </div>
+      </div>
+      <div id="part2" style="display:flex;">
+         <img id="part2-1" src="{% static 'pokemon/img/rulebook.jpg' %}">
+
+      </div>
+
+      <script type="text/javascript" src="{% static 'pokemon/js/jquery-3.1.0.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'pokemon/js/flipbook/underscore-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/flipbook/backbone-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/flipbook/turn.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/flipbook/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/custom.js' %}"></script>
+
+<script type="text/javascript">
+
+
+  FlipbookSettings = {
+    options: {
+      pageWidth: 250,
+      pageHeight: 400,
+      pages: 4,
+      autocenter:true
+    },
+  };
+  </script>
+
+   </body>
+   </html>

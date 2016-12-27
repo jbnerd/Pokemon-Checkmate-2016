@@ -1,0 +1,196 @@
+{%load static from staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>RULEBOOK</title>
+
+
+      <link rel="stylesheet" href="{% static 'pokemon/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'pokemon/css/fontawesome.min.css' %}">
+      <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+      <link rel="stylesheet" type="text/css" href="{% static 'pokemon/css/rulebook.css' %}">
+
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Sonsie+One&effect=3d|fire|fire-animation'rel='stylesheet' type='text/css'> -->
+
+
+
+
+   </head>
+
+   <body style="overflow-x:hidden;">
+
+   <div id="part1">
+    <div class="container" style="width:700px !important;">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 class="text-center head font-effect-3d ">RULEBOOK</h1>
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-sm-12">
+
+               <div class="catalog-app">
+              <div id="viewer">
+                <div id="flipbook" class="ui-flipbook">
+
+                <div class="page cover" style="display:flex; justify-content:center; align-items:center; flex-direction:column;"><i class="fa fa-book w3-xxlarge" style="font-size:70px;color:black;"></i>
+                <h2 class="font-effect-3d" style="font-family:'Sonsie One';color:black; text-align:center;">Read carefully</h2>
+                </div>
+                  
+                  <div class="page" style="border-right:2px solid grey;">
+                <ul>
+                 <li>Do you want to be a pokemaster? Let's set upon the journey....</li>
+                 <li>The game consists of 30 questions.</li>
+                 <li>Time limit for the game is 2 hours only.</li>
+                 <li>You are firstly supposed to select a pokemon of your choice to play the game.</li>
+                 <li>The selected pokemon will be in the initail evolved stage with a 0 XP(Experience Points).</li>                 
+                </ul>
+                
+                </div>
+
+
+                <div class="page">
+                <ul>
+                 <li>You are provided 1000 coins initially.</li>
+                 <li>The game consists of a map where you will find 15 pokestops and 15 pokegyms.</li>
+                 <li>Pokestops are represented by pokeballs whereas pokegyms are represented by wifi signals.</li>
+                 <li>Each Pokestop has an entry fee of 100 coins whereas Pokegym has an entry fee of 200 coins.</li>
+                 <li>A battle awaits you at every pokestop and pokegym.</li>
+         
+                  
+                </ul>
+                
+                </div>
+                <div class="page" style="border-right:2px solid grey;">
+                   <ul>
+                 <li>You can win the battle by giving a correct answer to the question given there.</li>
+                 <li>Remember, Pokestops have comparatively easier questions than Pokegyms.</li>
+                 <li>After answering the question, you have to attack the opponent pokemon to see whether you have won or lost the battle.</li>
+                 <li>Winning the battle against the opponent will award you some coins.</li>
+                 
+                   
+                </ul>
+                
+                </div>
+                
+                <div class="page">
+                   <ul>
+                 <li>The increase in your pokemon XP and coins on winning the battle depends on the battle itself. For example, if you have a fire type pokemon, winning a battle against a water type pokemon would be 
+difficult, hence you will be awarded more coins and XP whereas winning a battle against a grass pokemon would be easier, hence you will be awarded lesser coins and XP.
+Winning a pokegym will award you more points than winning a pokegym.</li>
+                 
+                
+                 
+                   
+                </ul>
+                
+                </div>
+
+                <div class="page" style="border-right:2px solid grey;">
+                   <ul>
+                 <li>Your pokemon will evolve to the next stage after your XP goes beyond 4000 and 8000 which will reduce the entry fees for the pokestops and the pokegyms.</li> 
+                 <li>After winning, the corresponding pokestop or pokegym will be disabled and you can visit the other stop or gym.</li> 
+                 <li>On giving a wrong answer to the question, you lose the battle against the opponent pokemon and your pokemon will faint.</li>  
+                        
+                </ul>
+                
+                </div>
+
+                   <div class="page">
+                   <ul>
+                 <li>Losing the battle will have no effect on your pokemon's XP.</li>  
+                 <li>You need to visit pokecenter and spend some coins to rejuvenate your pokemon every time it faints, otherwise you cant play further.</li> 
+                 <li>Your can again visit the same pokestop or pokegym even after losing the fight.</li> 
+                 <li>But remember, Maximum number of visits allowed is only 3.</li>  
+                        
+                </ul>
+                
+                </div>
+
+                    <div class="page" style="border-right:2px solid grey;">
+                   <ul>
+                 <li>The number of visits for every pokestop or pokegym is indicated by its color.</li>  
+                 <li>Pokestop:<br>
+
+Red: 0 visit<br>
+Green: 1 visit<br>
+Blue: 2 visits<br>
+Black: 3 visits(disabled)<br></li> 
+                 <li>Pokegym:<br>
+
+Blue: 0 visit<br>
+Pink: 1 visit<br>
+Yellow: 2 visits<br>
+Black: 3 visits(disabled)</li> 
+           
+                        
+                </ul>
+                
+                </div>
+
+                    <div class="page">
+                   <ul>
+                    <li>After finishing the game, you can log out, otherwise you will be automatically logged out after the game finishes.</li>
+                    <li>Let's begin....</li>
+           
+                        
+                </ul>
+                
+                </div>
+
+                
+
+
+
+                <div class="page last" style="background:url({% static 'pokemon/img/background6.jpeg' %}); background-size:cover; background-position:center;"></div>
+                  <a ignore="1" class="ui-arrow-control ui-arrow-next-page"></a>
+                  <a ignore="1" class="ui-arrow-control ui-arrow-previous-page"></a>
+                </div>
+              </div>
+              </div>
+
+            </div>
+         </div>
+
+
+         <div class="row">
+            <div class="col-sm-12">
+               <a href="../" class="center-block text-center" onclick="window.close()">CLOSE</a>
+            </div>
+         </div>
+      </div>
+      </div>
+      <div id="part2" style="display:flex;">
+         <img id="part2-1" src="{% static 'pokemon/img/rulebook.jpg' %}">
+
+      </div>
+
+   <script type="text/javascript" src="{% static 'pokemon/js/jquery-3.1.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/flipbook/underscore-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/flipbook/backbone-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/flipbook/turn.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/flipbook/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'pokemon/js/custom.js' %}"></script>
+<script type="text/javascript">
+  // Change these settings
+
+  FlipbookSettings = {
+    options: {
+      pageWidth: 250,
+      pageHeight: 400,
+      pages: 4,
+      autocenter:true
+    },
+
+  };
+  </script>
+   </body>
+   </html>
