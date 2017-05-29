@@ -42,7 +42,7 @@ Checkmate is BITS Pilani's revolutionary quizzing event, where the participant's
   * database password - `teamrocket`
   * database user - `checkmate`
   * database host - `localhost`
-  [This](https://www.digitalocean.com/community/tutorials/how-to-use-mysql-or-mariadb-with-your-django-application-on-ubuntu-14-04) tutorial was reffered to while setting up mysql database.
+ - [This](https://www.digitalocean.com/community/tutorials/how-to-use-mysql-or-mariadb-with-your-django-application-on-ubuntu-14-04) tutorial was reffered to while setting up mysql database.
 
 - Open up a terminal in the working directory. Run `python manage.py shell`. Create a custom super user by running the command `python manage.py createsuperuser` in the shell.
 
@@ -97,3 +97,13 @@ for j in qData:
 - `pokemonData.json` and `queans.json` contain the pokemon and question-answer objects used in the original event in .json format.
 
 - `scripts.txt` contains the commands that need to be typed into the shell to populate the database using the `.json` files.
+
+# Python package dependencies
+
+Virtual Environment can be set up for installing the external python package dependencies.
+
+* virtualenv
+* django 1.9.1
+* django-ckeditor
+* re (regular expressions)
+* json
