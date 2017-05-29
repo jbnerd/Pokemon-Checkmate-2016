@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'ckeditor',
+    'ckeditor',#ckeditor was used for better formatting of text while entering in questions from the django admin panel
     'pokemon.apps.PokemonConfig',
     'django.contrib.admin',
     'django.contrib.auth',
