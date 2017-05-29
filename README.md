@@ -51,7 +51,7 @@ Checkmate is BITS Pilani's revolutionary quizzing event, where the participant's
 - Manually create an object in the Submit column of the database. !!(Create only one object and nothing more or less than that)!!
 
 - In a new terminal fire up the django API shell by running `python manage.py shell`. Type in the following commands one by one in it to populate the database :-
-```
+```python
 from pokemon.views import *
 with open('pokemonData.json') as fh:
      data = json.load(fh)
@@ -69,7 +69,7 @@ for j in pokeData:
      p.save()
      print(j['pk'])
 ```
-```    
+```python
 from pokemon.views import *
 with open('queans.json') as fh:
      data = json.load(fh)
