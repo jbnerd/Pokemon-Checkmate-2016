@@ -1,0 +1,2 @@
+- These are the html templates used in the game.
+- Documentation and comments on any of the front end work is not available
